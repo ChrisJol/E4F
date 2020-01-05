@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --uno-bg-color: rgb(108, 214, 101);
+    --uno-red: rgb(255, 87, 87);
+    --uno-yellow: rgb(255, 222, 89);
+    --uno-blue: rgb(81, 113, 255);
+    --uno-green: rgb(126, 217, 88);
+
+    --main-font: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+@font-face{
+    font-family: Futura;
+    src: url("../fonts/Futura.ttc");
+}
+@font-face{
+    font-family: "Letter Gothic Std Bold";
+    src: url("../fonts/LetterGothicStd-Bold.otf");
+    font-weight: bold;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+nav{
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: 120px repeat(5, 135px) 120px;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    /* height: 100px; */
+
+    border-bottom: 1px solid black;
+}
+
+.nav__img--joan,
+.nav__img--matt{
+    width: 100%;
+}
+
+.nav__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 135px;
+    height: 32px;
+
+    border-radius: 50px;
+    border: 1px solid black;
+
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: Futura;
+    text-align: center;
+}
+
+.episodes{
+    background-color: black;
+    color: white;
+}
+
+.spotify{
+    background-color: #4acd41;
+}
+
+.fb{
+    background-color: #38abec;
+}
+
+.patreon{
+    background-color: #f13d94;
+}
+.rss{
+    background-color: #f4d031;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 300px 500px;
+    grid-gap: 30px;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px;
+    border-bottom: 1px solid black;
+}
+
+.about--img{
+    width: 100%;
+}
+
+.about__info{
+    align-self: start;
+}
+.about__info--title{
+    font-family: "Letter Gothic Std Bold";
+}
+.about__info--body{
+    font-family: Futura;
+    font-size: 15px;
+}
