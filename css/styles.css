@@ -3,29 +3,23 @@
 }
 
 :root {
-    --uno-bg-color: rgb(108, 214, 101);
-    --uno-red: rgb(255, 87, 87);
-    --uno-yellow: rgb(255, 222, 89);
-    --uno-blue: rgb(81, 113, 255);
-    --uno-green: rgb(126, 217, 88);
-
-    --main-font: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-}
-
-@font-face{
-    font-family: Futura;
-    src: url("../fonts/Futura.ttc");
-}
-@font-face{
-    font-family: "Letter Gothic Std Bold";
-    src: url("../fonts/LetterGothicStd-Bold.otf");
-    font-weight: bold;
+    --green: #4acd41;
+    --blue: #38abec;
+    --pink: #f13d94;
+    --yellow: #f4d031;
 }
 
 body{
     margin: 0;
     padding: 0;
     background-color: #f6f6f6;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 nav{
@@ -35,15 +29,18 @@ nav{
     justify-content: center;
     align-items: center;
 
-    padding: 20px;
-    /* height: 100px; */
-
+    padding: 20px 10px 0 10px;
     border-bottom: 1px solid black;
 }
 
-.nav__img--joan,
+.nav__img--joan{
+    width: 100%;
+    margin-bottom: -9px;
+}
+
 .nav__img--matt{
     width: 100%;
+    margin-bottom: -14px;
 }
 
 .nav__link{
@@ -53,14 +50,14 @@ nav{
 
     width: 135px;
     height: 32px;
+    margin-bottom: -10px;
 
     border-radius: 50px;
     border: 1px solid black;
 
     text-decoration: none;
     color: black;
-    font-size: 15px;
-    font-family: Futura;
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
 }
 
@@ -70,42 +67,108 @@ nav{
 }
 
 .spotify{
-    background-color: #4acd41;
+    background-color: var(--green);
 }
 
 .fb{
-    background-color: #38abec;
+    background-color: var(--blue);
 }
 
 .patreon{
-    background-color: #f13d94;
+    background-color: var(--pink);
 }
 .rss{
-    background-color: #f4d031;
+    background-color: var(--yellow);
+}
+
+.twitter-link{
+    text-decoration: none;
+    color: var(--pink);
+}
+.twitter-link:visited{
+    color: var(--pink);
 }
 
 .about{
     display: grid;
-    grid-template-columns: 300px 500px;
+    grid-template-columns: 400px 625px;
     grid-gap: 30px;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 
-    padding: 80px;
-    border-bottom: 1px solid black;
+    padding: 60px;
 }
 
 .about--img{
     width: 100%;
+    box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.1);
+    border-radius: 5px;
 }
 
 .about__info{
     align-self: start;
 }
 .about__info--title{
-    font-family: "Letter Gothic Std Bold";
+    font-family: 'Calistoga', cursive;
+    font-size: 50px;
+    margin: 0;
+    line-height: 1;
 }
 .about__info--body{
-    font-family: Futura;
-    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+    /* font-family: 'Arima Madurai', cursive; */
+    line-height: 32px;
+}
+
+.bio{
+    display: grid;
+    grid-template-columns: 480px 480px;
+    grid-gap: 95px;
+    max-width: 1055px;
+    justify-content: space-between;
+    margin: 40px auto;
+}
+
+.bio__matt,
+.bio__joan{
+    display: flex;
+    flex-direction: column;
+}
+
+.bio__joan--header,
+.bio__matt--header{
+    display: grid;
+    grid-template-columns: 100px 300px;
+    grid-gap: 10px;
+    align-items: end;
+    justify-content: start;
+
+    padding: 0 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+.bio__joan--title,
+.bio__matt--title{
+    font-family: 'Calistoga', cursive;
+    font-size: 35px;
+    margin: 0 0 0 10px;
+}
+
+.bio__joan--img,
+.bio__matt--img{
+    width: 100%;
+    margin-bottom: -8px;
+}
+.bio__matt--img{
+    transform: rotateY(180deg);
+}
+
+.bio__matt--body,
+.bio__joan--body{
+    padding: 0 15px;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 32px;
+    margin: 7px 0;
 }
