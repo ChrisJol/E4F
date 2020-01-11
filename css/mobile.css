@@ -21,7 +21,7 @@
     }
 
     .about{
-        grid-template-columns: minmax(150px, 400px) 1fr;
+        grid-template-columns: minmax(100px, 400px) 1fr;
         grid-template-areas: 
             "img links"
             "desc desc"
@@ -56,7 +56,7 @@
 
     .bio{
         grid-template-columns: 1fr;
-        min-width: 280px;
+        min-width: 230px;
         max-width: 625px;
         padding: 0;
         justify-content: center;
