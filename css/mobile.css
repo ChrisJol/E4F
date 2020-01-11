@@ -17,7 +17,6 @@
     }
 
     .about{
-        grid-template-columns: 1fr 100px;
         grid-template-columns: minmax(200px, 400px) 1fr;
         grid-template-areas: 
             "img links"
@@ -25,7 +24,7 @@
         ;
 
         max-width: 625px;
-        padding: 60px;
+        padding: 30px;
         margin: 0 auto;
     }
 
@@ -53,19 +52,33 @@
 
     .bio{
         grid-template-columns: 1fr;
+        min-width: 400px;
         max-width: 625px;
-        padding: 0 60px;
+        padding: 0 30px;
         justify-content: center;
+    }
+
+    .bio__joan--header,
+    .bio__matt--header{
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-gap: 10px;
+        align-items: end;
+        justify-content: start;
     }
 
     .bio__joan--title,
     .bio__matt--title{
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .bio__matt,
     .bio__joan{
-        /* height: 100vh; */
         justify-content: center;
+    }
+
+    .bio__matt--body,
+    .bio__joan--body{
+        padding: 0;
     }
 }
